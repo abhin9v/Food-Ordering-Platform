@@ -1,0 +1,133 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(13, 13, 13, 0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: -0.5px;
+  cursor: pointer;
+  user-select: none;
+}
+.logo span { color: var(--accent2); }
+
+.links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.link {
+  color: var(--text2);
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color var(--transition);
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-body);
+}
+.link:hover { color: var(--text); }
+.link.active { color: var(--text); }
+
+.right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.userRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #000;
+  cursor: default;
+  user-select: none;
+}
+
+.authBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition);
+}
+.authBtn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.cartBtn {
+  position: relative;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background var(--transition), transform var(--transition);
+}
+.cartBtn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.cartCount {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--accent2);
+  color: #000;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .links { display: none; }
+  .nav   { padding: 0 4%; }
+}

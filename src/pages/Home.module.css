@@ -1,0 +1,175 @@
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 68px 5% 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(255,107,53,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(255,209,102,0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 2rem 0;
+}
+
+.heroLeft {}
+
+.heroTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,107,53,0.1);
+  border: 1px solid rgba(255,107,53,0.3);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 4.5vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.06;
+  margin-bottom: 1.5rem;
+}
+
+.accent  { color: var(--accent);  }
+.accent2 { color: var(--accent2); }
+
+.heroSub {
+  color: var(--text2);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.stat {}
+
+.statNum {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent2);
+}
+
+.statLabel {
+  font-size: 0.82rem;
+  color: var(--text3);
+  margin-top: 2px;
+}
+
+/* ── Floating cards ── */
+.heroRight {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-end;
+}
+
+.floatCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 380px;
+  animation: floatCard 3s ease-in-out infinite;
+}
+
+.floatEmoji { font-size: 2.6rem; flex-shrink: 0; }
+
+.floatInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.floatInfo strong { font-size: 0.98rem; font-weight: 600; }
+.floatInfo small  { font-size: 0.8rem;  color: var(--text2); }
+
+.floatPrice {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--accent2);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── Restaurants section ── */
+.restaurantsSection {
+  padding: 4rem 5% 5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.seeAll {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity var(--transition);
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  padding: 0;
+}
+.seeAll:hover { opacity: 0.8; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .heroGrid  { grid-template-columns: 1fr; }
+  .heroRight { display: none; }
+}
+@media (max-width: 600px) {
+  .restaurantsSection { padding: 3rem 4% 4rem; }
+}

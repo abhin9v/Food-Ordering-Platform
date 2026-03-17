@@ -1,0 +1,220 @@
+.page { padding-top: 68px; }
+
+/* ── Hero ── */
+.hero {
+  padding: 4rem 5% 3rem;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255,107,53,0.06) 0%, transparent 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.heroTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,107,53,0.1);
+  border: 1px solid rgba(255,107,53,0.3);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.accent  { color: var(--accent);  }
+.accent2 { color: var(--accent2); }
+
+.heroSub {
+  color: var(--text2);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* ── Mission ── */
+.missionSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 4rem 5%;
+  align-items: start;
+}
+
+.missionTitle {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.missionText p {
+  color: var(--text2);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.statsRow {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.statItem { text-align: center; }
+
+.statNum {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  color: var(--text3);
+  margin-top: 2px;
+}
+
+/* ── Features ── */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.featureCard {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  transition: border-color var(--transition);
+}
+.featureCard:hover { border-color: rgba(255,107,53,0.3); }
+
+.featureIcon  { font-size: 2rem; margin-bottom: 0.6rem; }
+.featureTitle { font-size: 0.98rem; font-weight: 700; margin-bottom: 0.4rem; }
+.featureDesc  { font-size: 0.82rem; color: var(--text2); line-height: 1.5; }
+
+/* ── Tech Stack ── */
+.techSection {
+  padding: 3rem 5%;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.techGrid {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.techChip {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: border-color var(--transition), color var(--transition);
+}
+.techChip:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ── Developer ── */
+.devSection { padding: 4rem 5% 5rem; }
+
+.devCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  max-width: 420px;
+  text-align: center;
+}
+
+.devAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0 auto 1.5rem;
+  border: 3px solid rgba(255,107,53,0.3);
+}
+
+.devName {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.devRole {
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.devBio {
+  color: var(--text2);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.devLinks {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.devLink {
+  background: var(--surface2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color var(--transition), color var(--transition);
+}
+.devLink:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .missionSection { grid-template-columns: 1fr; gap: 2.5rem; }
+  .featuresGrid   { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .hero, .missionSection, .techSection, .devSection { padding-left: 4%; padding-right: 4%; }
+}

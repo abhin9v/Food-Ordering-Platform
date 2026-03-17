@@ -1,0 +1,126 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0,0,0,0.82);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 460px;
+  padding: 2.5rem;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.25s ease;
+}
+@keyframes slideUp {
+  from { transform: translateY(24px) scale(0.97); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.close {
+  position: absolute;
+  top: 1.2rem; right: 1.2rem;
+  background: var(--surface2);
+  border: none; color: var(--text2);
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+  display: flex; align-items: center; justify-content: center;
+}
+.close:hover { background: var(--red); color: #fff; }
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.sub { color: var(--text2); font-size: 0.9rem; margin-bottom: 1rem; }
+
+.rpBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(6, 214, 160, 0.08);
+  border: 1px solid rgba(6, 214, 160, 0.3);
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.82rem;
+  color: var(--accent3);
+}
+
+.summary {
+  background: var(--surface2);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.88rem;
+}
+.summaryTitle { font-weight: 700; margin-bottom: 0.6rem; color: var(--text); }
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text2);
+  margin-bottom: 4px;
+}
+.summaryTotal {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--accent2);
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+  margin-top: 6px;
+}
+
+.method {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  margin-bottom: 0.8rem;
+  transition: border-color var(--transition), background var(--transition);
+}
+.method:hover,
+.methodSelected {
+  border-color: var(--accent);
+  background: rgba(255, 107, 53, 0.08);
+}
+.method input[type=radio] { accent-color: var(--accent); transform: scale(1.3); }
+.methodIcon  { font-size: 1.5rem; }
+.methodLabel { font-size: 0.95rem; font-weight: 500; }
+.methodSub   { font-size: 0.78rem; color: var(--text3); }
+
+.payBtn {
+  width: 100%;
+  background: var(--accent3);
+  color: #000;
+  border: none;
+  padding: 14px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: opacity var(--transition);
+  margin-top: 1.5rem;
+}
+.payBtn:hover:not(:disabled) { opacity: 0.88; }
+.payBtn:disabled { opacity: 0.6; cursor: not-allowed; }

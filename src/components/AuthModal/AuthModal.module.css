@@ -1,0 +1,109 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 440px;
+  padding: 2.5rem;
+  position: relative;
+  animation: slideUp 0.25s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(24px) scale(0.97); opacity: 0; }
+  to   { transform: translateY(0)    scale(1);    opacity: 1; }
+}
+
+.close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: var(--surface2);
+  border: none;
+  color: var(--text2);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.close:hover { background: var(--red); color: #fff; }
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.sub {
+  color: var(--text2);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.field { margin-bottom: 1.2rem; }
+
+.submit {
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--transition);
+  margin-top: 0.5rem;
+}
+.submit:hover { background: var(--accent-hover); }
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.divider span { color: var(--text3); font-size: 0.8rem; }
+
+.switch {
+  text-align: center;
+  margin-top: 1.2rem;
+  color: var(--text2);
+  font-size: 0.88rem;
+}
+.switch span {
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 600;
+}
+.switch span:hover { text-decoration: underline; }
