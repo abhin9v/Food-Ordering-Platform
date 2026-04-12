@@ -36,6 +36,9 @@ const CartModal = () => {
             <div className={styles.itemList}>
               {items.map(item => (
                 <div key={item.id} className={styles.item}>
+                  {item.image && (
+                    <img className={styles.itemThumb} src={item.image} alt="" width={44} height={44} aria-hidden />
+                  )}
                   <div className={styles.itemName}>{item.name}</div>
                   <div className={styles.itemControls}>
                     <button className={styles.qtyBtn}

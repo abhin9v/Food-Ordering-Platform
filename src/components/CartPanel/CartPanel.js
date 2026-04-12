@@ -32,6 +32,9 @@ const CartPanel = () => {
           <div className={styles.list}>
             {items.map(item => (
               <div key={item.id} className={styles.item}>
+                {item.image && (
+                  <img className={styles.itemThumb} src={item.image} alt="" width={40} height={40} aria-hidden />
+                )}
                 <span className={styles.itemName}>{item.name}</span>
                 <div className={styles.controls}>
                   <button className={styles.qtyBtn}

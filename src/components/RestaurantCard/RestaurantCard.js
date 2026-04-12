@@ -4,12 +4,12 @@ import styles from './RestaurantCard.module.css';
 
 const RestaurantCard = ({ restaurant }) => {
   const navigate = useNavigate();
-  const { id, name, emoji, rating, cuisine, tags, time, minOrder, badge, badgeVeg } = restaurant;
+  const { id, name, image, rating, cuisine, tags, time, minOrder, badge, badgeVeg } = restaurant;
 
   return (
     <div className={styles.card} onClick={() => navigate(`/restaurant/${id}`)}>
       <div className={styles.imgBox}>
-        <span className={styles.emoji}>{emoji}</span>
+        <img className={styles.cover} src={image} alt={name} loading="lazy" />
         <span className={`${styles.badge} ${badgeVeg ? styles.badgeVeg : ''}`}>{badge}</span>
       </div>
 

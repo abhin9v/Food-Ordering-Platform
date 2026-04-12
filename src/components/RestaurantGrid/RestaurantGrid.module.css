@@ -29,10 +29,13 @@
 .chips::-webkit-scrollbar { display: none; }
 
 .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--text2);
-  padding: 10px 20px;
+  padding: 8px 18px 8px 10px;
   border-radius: var(--radius-pill);
   font-family: var(--font-body);
   font-size: 0.88rem;
@@ -41,6 +44,15 @@
   white-space: nowrap;
   transition: background var(--transition), border-color var(--transition), color var(--transition);
   flex-shrink: 0;
+}
+
+.chipThumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
 }
 .chip:hover {
   background: rgba(255,107,53,0.1);

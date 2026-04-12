@@ -34,7 +34,8 @@ const RestaurantGrid = ({ limit }) => {
             className={`${styles.chip} ${category === cat.id ? styles.chipActive : ''}`}
             onClick={() => dispatch(setCategory(cat.id))}
           >
-            {cat.emoji} {cat.label}
+            <img className={styles.chipThumb} src={cat.image} alt="" width={28} height={28} aria-hidden />
+            {cat.label}
           </button>
         ))}
       </div>

@@ -24,7 +24,14 @@ const MenuItem = ({ item, restaurantId }) => {
   return (
     <div className={styles.menuItem}>
       <div className={styles.itemLeft}>
-        <span className={styles.itemEmoji}>{item.emoji}</span>
+        <img
+          className={styles.itemThumb}
+          src={item.image}
+          alt={item.name}
+          loading="lazy"
+          width={88}
+          height={88}
+        />
         <div>
           <div className={styles.itemName}>{item.name}</div>
           <div className={styles.itemDesc}>{item.desc}</div>
@@ -76,7 +83,13 @@ const MenuPage = () => {
           ← Back to Restaurants
         </button>
         <div className={styles.restaurantInfo}>
-          <span className={styles.restaurantEmoji}>{restaurant.emoji}</span>
+          <img
+            className={styles.restaurantThumb}
+            src={restaurant.image}
+            alt={restaurant.name}
+            width={120}
+            height={120}
+          />
           <div>
             <h1 className={styles.restaurantName}>{restaurant.name}</h1>
             <div className={styles.restaurantMeta}>

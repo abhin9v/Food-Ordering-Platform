@@ -14,14 +14,17 @@
 
 .imgBox {
   height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #1e1e1e, #262626);
   position: relative;
+  background: var(--surface2);
+  overflow: hidden;
 }
 
-.emoji { font-size: 4.5rem; }
+.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .badge {
   position: absolute;

@@ -68,8 +68,18 @@
   font-size: 0.9rem;
 }
 
+.itemThumb {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm, 6px);
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
+
 .itemName {
   flex: 1;
+  min-width: 0;
   font-weight: 500;
 }
 

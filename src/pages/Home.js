@@ -3,12 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { openModal } from '../redux/slices/uiSlice';
 import RestaurantGrid from '../components/RestaurantGrid/RestaurantGrid';
+import { foodPhoto } from '../data/foodPhotoUrls';
 import styles from './Home.module.css';
 
 const FLOATING_CARDS = [
-  { emoji: '🍕', name: 'Margherita Pizza',   sub: 'Spicy Palace • ⭐ 4.8', price: '₹299' },
-  { emoji: '🍔', name: 'Double Smash Burger', sub: 'Burger Bros • ⭐ 4.6',   price: '₹249' },
-  { emoji: '🍜', name: 'Dragon Noodles',      sub: 'Wok & Roll • ⭐ 4.7',   price: '₹189' },
+  { image: foodPhoto('photo-1513104890138-7c749659a591', 160, 160), name: 'Margherita Pizza',   sub: 'Spicy Palace • ⭐ 4.8', price: '₹299' },
+  { image: foodPhoto('photo-1568901346375-23c9450c58cd', 160, 160), name: 'Double Smash Burger', sub: 'Burger Bros • ⭐ 4.6',   price: '₹249' },
+  { image: foodPhoto('photo-1612929633738-8fe44f7ec841', 160, 160), name: 'Dragon Noodles',      sub: 'Wok & Roll • ⭐ 4.7',   price: '₹189' },
 ];
 
 const Home = () => {
@@ -69,7 +70,7 @@ const Home = () => {
                 className={styles.floatCard}
                 style={{ animationDelay: `${i}s`, marginRight: i === 1 ? '2rem' : 0 }}
               >
-                <span className={styles.floatEmoji}>{card.emoji}</span>
+                <img className={styles.floatThumb} src={card.image} alt={card.name} width={64} height={64} />
                 <div className={styles.floatInfo}>
                   <strong>{card.name}</strong>
                   <small>{card.sub}</small>

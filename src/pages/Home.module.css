@@ -115,7 +115,14 @@
   animation: floatCard 3s ease-in-out infinite;
 }
 
-.floatEmoji { font-size: 2.6rem; flex-shrink: 0; }
+.floatThumb {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
 
 .floatInfo {
   display: flex;

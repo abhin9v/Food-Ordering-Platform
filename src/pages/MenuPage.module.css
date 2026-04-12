@@ -30,7 +30,14 @@
   flex-wrap: wrap;
 }
 
-.restaurantEmoji { font-size: 3.8rem; }
+.restaurantThumb {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
 
 .restaurantName {
   font-family: var(--font-display);
@@ -89,7 +96,14 @@
   min-width: 0;
 }
 
-.itemEmoji { font-size: 2.4rem; flex-shrink: 0; }
+.itemThumb {
+  width: 88px;
+  height: 88px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
 
 .itemName {
   font-size: 1rem;
